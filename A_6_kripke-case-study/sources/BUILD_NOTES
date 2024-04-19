@@ -1,0 +1,8 @@
+ml GCC ParaStationMPI Score-P CUDA CMake
+
+EXTRA_PROF_WRAPPER=off cmake .. -C /p/project/deepsea/geiss1/kripke-v1.2.7-ddcac43/host-configs/deep-est-esb-V100-nvcc-gcc.cmake  -DCMAKE_BUILD_TYPE=Release -DRAJA_ENABLE_EXERCISES=off
+EXTRA_PROF_SCOREP_INSTRUMENTATION=$(scorep-config --prefix)/lib/scorep/scorep_instrument_function.so EXTRA_PROF_ENERGY=on make -j
+
+
+EXTRA_PROF_WRAPPER=off cmake .. -C /p/project/deepsea/geiss1/kripke-v1.2.7-ddcac43/host-configs/deep-est-cn-gcc.cmake  -DCMAKE_BUILD_TYPE=Release -DRAJA_ENABLE_EXERCISES=off
+EXTRA_PROF_SCOREP_INSTRUMENTATION=$(scorep-config --prefix)/lib/scorep/scorep_instrument_function.so EXTRA_PROF_GPU=off EXTRA_PROF_ENERGY=on make -j

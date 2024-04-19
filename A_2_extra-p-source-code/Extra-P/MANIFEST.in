@@ -1,0 +1,2 @@
+recursive-include extrap *.svg
+recursive-include tools/extra-prof *

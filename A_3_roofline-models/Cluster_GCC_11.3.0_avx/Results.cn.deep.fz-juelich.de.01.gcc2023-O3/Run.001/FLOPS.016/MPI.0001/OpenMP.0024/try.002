@@ -1,0 +1,3 @@
+srun: error: Node failure on dp-cn22
+srun: error: Nodes dp-cn22 are still not ready
+srun: error: Something is wrong with the boot of the nodes.
